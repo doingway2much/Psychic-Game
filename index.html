@@ -2,39 +2,61 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Psychic-Game</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="assets/css/style.css">
-    </head>
-        <body>
-        
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Psychic-Game</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Medula+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
             <div id="greeting">
                 <p>Guess what letter I'm thinking of</p>
             </div>
-            <br>
+        </div>
+        <div class="row">
             <div id="wins">
                 <p>Number of Wins: 0</p>
             </div>
+        </div>
+        <div class="row">
             <div id="losses">
                 <p>Number of losses: 0</p>
             </div>
+        </div>
+        <div class="row">
             <div id="remaining">
                 <p>Guesses remaning: 10</p>
             </div>
+        </div>
+        <div class="row">
             <div id="history">
                 <p>Previous guesses: </p>
             </div>
-
-        <!--[if lt IE 7]>
+        </div>
+        <div class="row">
+            <div id="gameover">
+                <p> </p>
+            </div>
+        </div>
+    </div>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        
-        <script src="assets/javascript/game.js" async defer>
-        </script>
-    </body>
+
+    <script src="assets/javascript/game.js" async defer>
+    </script>
+</body>
+
 </html>

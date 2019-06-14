@@ -25,6 +25,9 @@ document.onkeyup = function(event) {
     console.log(userGuessed);
     console.log("The user guessed " + userGuess);
 
+    var gameOver = document.getElementById("gameover");
+    gameOver.textContent = "";
+
     // If the users guesses the right anwser
 
     if(userGuess === computerGuessed[0]) {
@@ -35,6 +38,10 @@ document.onkeyup = function(event) {
         console.log(numberOfWins);
         numGuess = 10;
         userGuessed = [];
+        var tada = new Audio("assets/sounds/tada.mp3");
+        tada.play();
+        var gameOver = document.getElementById("gameover");
+        gameOver.textContent = "Impressive"
         computerGuessed.length = 0;
         var getRandomLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
         computerGuessed.push(getRandomLetter);
@@ -52,8 +59,10 @@ document.onkeyup = function(event) {
                 numGuess = 10;
                 losses++;
                 userGuessed = [];
-                var gameOver = document.getElementById("greeting");
-                gameOver.textContent = "Guess what letter I'm thinking of......Sorry game over!!!!!";
+                var tada = new Audio("assets/sounds/horn.mp3");
+                tada.play();
+                var gameOver = document.getElementById("gameover");
+                gameOver.textContent = "Sorry game over! Hit any key to start a new game."
                 computerGuessed.length = 0;
                 var getRandomLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
                 computerGuessed.push(getRandomLetter);
