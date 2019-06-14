@@ -1,17 +1,19 @@
 
 
 
-.container-fluid {
+.container {
     font-family: 'Medula One', cursive;
     background-image: url("https://www.projectcontrolacademy.com/wp-content/uploads/2016/04/projects-fortuneteller.png");
     background-repeat: no-repeat;
-    width: 800px;
-    height: 700px;
+    width: 956px;
+    height: 419px;
     font-size: 40px;
     margin: auto 0;
 }
-.main {
 
+.content {
+    width: 956px;
+    height: 419px;
 }
 #greeting {
     color: greenyellow;

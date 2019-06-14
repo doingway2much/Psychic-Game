@@ -34,14 +34,14 @@ document.onkeyup = function(event) {
         console.log("Looks like you guessed the righ anwser");
         numberOfWins++;
         var wins = document.getElementById("wins");
-        wins.textContent = "Number of Wins: " + numberOfWins;
+        wins.textContent = "Wins: " + numberOfWins;
         console.log(numberOfWins);
         numGuess = 10;
         userGuessed = [];
         var tada = new Audio("assets/sounds/tada.mp3");
         tada.play();
         var gameOver = document.getElementById("gameover");
-        gameOver.textContent = "Impressive"
+        gameOver.textContent = "Impressive!!!!!!"
         computerGuessed.length = 0;
         var getRandomLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
         computerGuessed.push(getRandomLetter);
@@ -53,7 +53,7 @@ document.onkeyup = function(event) {
                 var wrong = document.getElementById("remaining");
                 wrong.textContent = "Guesses remaning: " + numGuess;
                 var loss = document.getElementById("losses");
-                loss.textContent = "Number of losses: " + losses;
+                loss.textContent = "Losses: " + losses;
                 console.log(losses);
             } if(numGuess === 0) {
                 numGuess = 10;
