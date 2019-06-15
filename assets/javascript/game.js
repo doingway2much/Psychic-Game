@@ -19,34 +19,44 @@ document.onkeyup = function(event) {
     var userGuess = event.key
     userGuessed.push(userGuess);
     
-    //Pass 
+    // Add guess to history
     var guess = document.getElementById("history");
     guess.textContent = userGuessed;
-    console.log(userGuessed);
     console.log("The user guessed " + userGuess);
+
 
     var gameOver = document.getElementById("gameover");
     gameOver.textContent = "";
 
     // If the users guesses the right anwser
-
     if(userGuess === computerGuessed[0]) {
         console.log("Looks like you guessed the righ anwser");
         numberOfWins++;
+        // Update div with win
         var wins = document.getElementById("wins");
         wins.textContent = "Wins: " + numberOfWins;
         console.log(numberOfWins);
+        // Reset variables
         numGuess = 10;
         userGuessed = [];
+
+        // Play sound for win!!!!
         var tada = new Audio("assets/sounds/tada.mp3");
         tada.play();
+
+        // Text anouncement for winner
         var gameOver = document.getElementById("gameover");
         gameOver.textContent = "Impressive!!!!!!"
+
+        //  Reset guess length
         computerGuessed.length = 0;
+
+        // Pick a new letter 
         var getRandomLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
         computerGuessed.push(getRandomLetter);
         console.log("The Psychic picked another letter: " + computerGuessed[0]);
         }else {
+            // If the users guesses the wrong anwser
             if(userGuess !== computerGuessed[0]) {
                 console.log("Looks like you guessed the wrong anwser");
                 numGuess--;
@@ -55,6 +65,7 @@ document.onkeyup = function(event) {
                 var loss = document.getElementById("losses");
                 loss.textContent = "Losses: " + losses;
                 console.log(losses);
+                // If the user runs out of turns 
             } if(numGuess === 0) {
                 numGuess = 10;
                 losses++;
