@@ -1,5 +1,8 @@
 
-
+body {
+    background-color: black;
+    
+}
 
 .container {
     font-family: 'Medula One', cursive;
@@ -9,33 +12,48 @@
     height: 419px;
     font-size: 40px;
     margin: auto 0;
+    color: white;
+    text-shadow: 2px 2px orange;
+   
 }
 
 .content {
     width: 956px;
     height: 419px;
+    margin: auto 0;
 }
 #greeting {
-    color: greenyellow;
+ 
     
 }
 #wins {
-    color: greenyellow;
+ 
 
 }
 #losses {
-    color: greenyellow;
+ 
 
 }
 #history {
-    color: greenyellow;
+    text-align: center;
+    position: relative;
+    top: 160px;
+    /* background: black; */
+ 
 
 }
 #remaining {
-    color: greenyellow;
+    position: relative;
+    top:  -40px;
+    left: 705px;
+
 
 }
 #gameover {
-    color: greenyellow;
+    font-size: 100px;
+    position: relative;
+    bottom: 30px;
+    left: 300px;
+    text-shadow: 3px 3px orange;
 
 }

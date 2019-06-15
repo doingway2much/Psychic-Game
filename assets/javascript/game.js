@@ -21,7 +21,7 @@ document.onkeyup = function(event) {
     
     //Pass 
     var guess = document.getElementById("history");
-    guess.textContent = "Previous guesses: " + userGuessed;
+    guess.textContent = userGuessed;
     console.log(userGuessed);
     console.log("The user guessed " + userGuess);
 
@@ -62,7 +62,7 @@ document.onkeyup = function(event) {
                 var tada = new Audio("assets/sounds/horn.mp3");
                 tada.play();
                 var gameOver = document.getElementById("gameover");
-                gameOver.textContent = "Sorry game over! Hit any key to start a new game."
+                gameOver.textContent = "Hit any key!!!!!!"
                 computerGuessed.length = 0;
                 var getRandomLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
                 computerGuessed.push(getRandomLetter);
